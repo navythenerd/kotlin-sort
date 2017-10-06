@@ -10,9 +10,9 @@ import java.util.*
 fun main(args: Array<String>) {
     // Setting up different sorting algorithms
     val sortingAlgos: Array<Sort<Int>> = arrayOf(
-            BubbleSort<Int>(),
-            MergeSort<Int>(),
-            QuickSort<Int>()
+            BubbleSort(),
+            MergeSort(),
+            QuickSort()
     )
 
     // Setting up unsorted data
