@@ -1,7 +1,4 @@
-import sort.BubbleSort
-import sort.MergeSort
-import sort.QuickSort
-import sort.Sort
+import sort.*
 import java.util.*
 
 /**
@@ -12,7 +9,8 @@ fun main(args: Array<String>) {
     val sortingAlgos: Array<Sort<Int>> = arrayOf(
             BubbleSort(),
             MergeSort(),
-            QuickSort()
+            QuickSort(),
+            SelectionSort()
     )
 
     // Setting up unsorted data
