@@ -25,7 +25,7 @@ fun main(args: Array<String>) {
     //Sorting data & print sorted
     for (algo in sortingAlgos) {
         val sorted = algo.sort(unsorted)
-        print("Sorted: ")
+        print("Sorted (${algo.javaClass.name}): ")
         printIntArray(sorted)
         print("\n")
     }
