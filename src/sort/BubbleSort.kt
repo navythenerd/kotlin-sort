@@ -7,6 +7,8 @@ package sort
  */
 class BubbleSort<T : Comparable<T>>: Sort<T> {
 
+    private val utils = Utils<T>() // providing some useful functions
+
     /**
      * Sort array
      *
@@ -20,21 +22,8 @@ class BubbleSort<T : Comparable<T>>: Sort<T> {
                 .asSequence()
                 .flatMap { (0 until (it - 1)).asSequence() }
                 .filter { sorting[it] > sorting[it + 1] }
-                .forEach { swap(sorting, it, it +1) }
+                .forEach { utils.swap(sorting, it, it +1) }
 
         return sorting
-    }
-
-    /**
-     * helper function to swap array entries
-     *
-     * @param array array to work with
-     * @param indexA data position 1 for swap operation
-     * @param indexB data position 2 for swap operation
-     */
-    private fun swap(array: Array<T>, indexA: Int, indexB: Int) {
-        val swap: T = array[indexA]
-        array[indexA] = array[indexB]
-        array[indexB] = swap
     }
 }
